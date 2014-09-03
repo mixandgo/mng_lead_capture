@@ -9,6 +9,7 @@ Feature: Newsletter signup
     When I fill in "and E-Mail" with "johndoe@example.com"
     And I click on "Sign Me Up"
     Then I should be on the home page
+    And Show me the page
     And I should see "Thank you! You are now subscribed to our newsletter"
     And "office@example.com" should receive an email
 

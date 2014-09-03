@@ -13,6 +13,9 @@ require "mng_newsletter"
 
 module Dummy
   class Application < Rails::Application
+    # Search thru the views in the engine
+    config.paths['app/views'].unshift(Rails.root.join('../../', 'app', 'views').to_s)
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -24,6 +27,9 @@ module Dummy
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # Look up locales from the engine
+    config.i18n.load_path += Dir[Rails.root.join('../../', 'config', 'locales', '**/*.{rb,yml}').to_s]
   end
 end
 

@@ -9,7 +9,8 @@ ENV["RAILS_ROOT"] ||= File.dirname(__FILE__) + "../../../spec/dummy"
 
 require 'cucumber/rails'
 require 'factory_girl_rails'
-# require 'email_spec/cucumber'
+require 'email_spec'
+require 'email_spec/cucumber'
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
