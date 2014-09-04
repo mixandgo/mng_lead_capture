@@ -24,4 +24,6 @@ rake mng_newsletter_engine:install:migrations
 
 MIT License. Copyright 2014 Mix & Go. http://mixandgo.com
 
+Follow Us: [@mixandgo](https://twitter.com/mixandgo)
+
 You are not granted rights or licenses to the trademarks of the Mix & Go, including without limitation the MngNewsletter name or logo.
