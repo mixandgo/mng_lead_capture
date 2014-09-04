@@ -1,6 +1,6 @@
 # MngNewsletter
 
-A simple Rails engine
+A small Newsletter engine that you can plug into an existing Ruby on Rails application and get a ready to use newsletter signup form + admin section + emailing capabilities
 
 ## Getting Started
 
