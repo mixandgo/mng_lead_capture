@@ -8,12 +8,12 @@ RSpec.describe NewsletterMailer, :type => :mailer do
       @email = NewsletterMailer.signup_notification(newsletter_signup.id)
     end
     
-    it "sends a notification email to office@mixandgo.com" do
-      @email.should deliver_to("office@mixandgo.com")
+    it "sends a notification email to office@example.com" do
+      @email.should deliver_to("office@example.com")
     end
 
-    it "sends a notification email from office@mixandgo.com" do
-      @email.should deliver_from("office@mixandgo.com")
+    it "sends a notification email from office@example.com" do
+      @email.should deliver_from("office@example.com")
     end
 
     it "sets the subject to 'New signup'" do

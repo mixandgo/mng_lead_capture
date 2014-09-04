@@ -9,7 +9,6 @@ Feature: Newsletter signup
     When I fill in "and E-Mail" with "johndoe@example.com"
     And I click on "Sign Me Up"
     Then I should be on the home page
-    And Show me the page
     And I should see "Thank you! You are now subscribed to our newsletter"
     And "office@example.com" should receive an email
 
@@ -19,6 +18,6 @@ Feature: Newsletter signup
     When I fill in "Your Name" with "John Doe"
     When I fill in "and E-Mail" with "johndoe@example.com"
     And I click on "Sign Me Up"
-    Then I should be on the home page
+    Then I should be on the newsletter signups page
     And I should see "We were unable to process your request, please try again."
     And I should see "Email has already been taken"
