@@ -22,6 +22,15 @@ After you install MngNewsletter and add it to your Gemfile, you need to install 
 rake mng_newsletter_engine:install:migrations
 ```
 
+Add the signup partial to one of your views, for example:
+
+```
+<div id="sidebar" class="col-sm-4">
+  <%= render "shared/newsletter_signup_form" %>
+</div>
+```
+
+
 MIT License. Copyright 2014 Mix & Go. http://mixandgo.com
 
 Follow Us: [@mixandgo](https://twitter.com/mixandgo)
