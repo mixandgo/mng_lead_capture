@@ -22,8 +22,8 @@ Then(/^I should not see "(.*?)"$/) do |text|
   page.should_not have_content(text)
 end
 
-Given(/^I've already signed up for the newsletter with "(.+)"$/) do |email|
-  create(:newsletter_signup, :email => email)
+Given(/^I've already signed up with "(.+)"$/) do |email|
+  create(:lead_signup, :email => email)
 end
 
 # Debugging tools

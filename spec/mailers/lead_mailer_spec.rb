@@ -1,13 +1,13 @@
 require "rails_helper"
 
-RSpec.describe NewsletterMailer, :type => :mailer do
+RSpec.describe LeadMailer, :type => :mailer do
   describe "#signup_notification" do
-    let(:newsletter_signup) { create(:newsletter_signup) }
+    let(:lead_signup) { create(:lead_signup) }
 
     before :each do
-      @email = NewsletterMailer.signup_notification(newsletter_signup.id)
+      @email = LeadMailer.signup_notification(lead_signup.id)
     end
-    
+
     it "sends a notification email to office@example.com" do
       @email.should deliver_to("office@example.com")
     end

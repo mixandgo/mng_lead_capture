@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140903110445) do
 
-  create_table "newsletter_signups", force: true do |t|
+  create_table "lead_signups", force: true do |t|
     t.string   "name"
     t.string   "email"
     t.datetime "created_at"

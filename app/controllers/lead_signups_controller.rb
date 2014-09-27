@@ -1,9 +1,9 @@
-class NewsletterSignupsController < ApplicationController
+class LeadSignupsController < ApplicationController
   def create
-    @newsletter_signup = NewsletterSignup.new(newsletter_signup_params)
+    @lead_signup = LeadSignup.new(lead_signup_params)
 
-    if @newsletter_signup.save
-      NewsletterMailer.signup_notification(@newsletter_signup.id).deliver
+    if @lead_signup.save
+      LeadMailer.signup_notification(@lead_signup.id).deliver
       flash[:notice] = t('.create_success')
       redirect_to :back
     else
@@ -14,8 +14,8 @@ class NewsletterSignupsController < ApplicationController
 
   private
 
-    def newsletter_signup_params
-      params.require(:newsletter_signup).permit(:name, :email)
+    def lead_signup_params
+      params.require(:lead_signup).permit(:name, :email)
     end
 
     def referer_template

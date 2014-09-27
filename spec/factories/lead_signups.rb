@@ -5,7 +5,7 @@ FactoryGirl.define do
     "someone#{n}@example.com"
   end
 
-  factory :newsletter_signup do
+  factory :lead_signup do
     sequence(:name) { |n| "John Doe#{n}" }
     email
   end

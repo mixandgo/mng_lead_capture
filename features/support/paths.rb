@@ -3,8 +3,8 @@ def path_to(page_name)
 
   when /home page/
     root_path
-  when /newsletter signups page/
-    newsletter_signups_path
+  when /lead signups page/
+    lead_signups_path
   else
     begin
       send("#{page_name}_path")

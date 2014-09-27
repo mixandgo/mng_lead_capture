@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-# Declare your gem's dependencies in mng_newsletter.gemspec.
+# Declare your gem's dependencies in mng_lead_capture.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
 gemspec
@@ -12,4 +12,3 @@ gemspec
 
 # To use debugger
 # gem 'debugger'
-gem 'pry'

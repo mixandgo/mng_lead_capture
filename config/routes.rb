@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :newsletter_signups
+  resources :lead_signups
 end

@@ -1,6 +1,6 @@
 en:
-  newsletter_signups:
+  lead_signups:
     create:
       create_fail: "We were unable to process your request, please try again."
-      create_success: "Thank you! You are now subscribed to our newsletter"
+      create_success: "Thank you for subscribing"
 
