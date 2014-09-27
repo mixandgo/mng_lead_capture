@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :lead_signups
+  resources :lead_capture_signups
 end
