@@ -5,9 +5,9 @@
   <p>Sign up to receive content updates in your inbox.</p>
   <%= form_for @lead_signup, :url => lead_signups_path do |f| %>
     <%= render 'shared/form_errors', :obj => @lead_signup %>
-    <%= f.text_field :name, :placeholder => "Your Name", :class => "form-control" %>
-    <%= f.text_field :email, :placeholder => "and E-Mail", :class => "form-control" %>
-    <%= f.text_field :phone, :placeholder => "and Phone", :class => "form-control" %>
+    <%= f.text_field :name, :placeholder => t(".name"), :class => "form-control" %>
+    <%= f.text_field :email, :placeholder => t(".email"), :class => "form-control" %>
+    <%= f.text_field :phone, :placeholder => t(".phone"), :class => "form-control" %>
     <%= f.submit "Sign Me Up", :class => "btn btn-primary btn-block" %>
   <% end %>
 </div>
