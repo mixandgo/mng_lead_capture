@@ -19,12 +19,9 @@ Then(/^I should see "(.*?)"$/) do |text|
 end
 
 Then(/^I should not see "(.*?)"$/) do |text|
-  page.should_not have_content(text)
+  expect(page).to_not have_content(text)
 end
 
-Given(/^I've already signed up with "(.+)"$/) do |email|
-  create(:lead_signup, :email => email)
-end
 
 # Debugging tools
 #

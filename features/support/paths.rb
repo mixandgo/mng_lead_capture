@@ -3,6 +3,8 @@ def path_to(page_name)
 
   when /home page/
     root_path
+  when /signup page/
+    root_path
   when /lead signups page/
     lead_signups_path
   else
