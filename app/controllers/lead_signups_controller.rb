@@ -15,7 +15,7 @@ class LeadSignupsController < ApplicationController
   private
 
     def lead_signup_params
-      params.require(:lead_signup).permit(:name, :email)
+      params.require(:lead_signup).permit(:name, :email, :phone)
     end
 
     def referer_template
