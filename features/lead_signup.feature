@@ -5,20 +5,19 @@ Feature: Lead signup
   We need a lead signup system
 
   Scenario: Guest signs up
-    Given I am on the home page
+    Given I am on the signup page
     When I fill in and submit the form
-    Then I should see "Thank you for subscribing"
-    And "office@example.com" should receive an email with subject "New signup"
+    Then I should see a notification
+    And I expect to receive an email notification
 
   Scenario: Owner receives the subscribers details
-    Given I am on the home page
+    Given I am on the signup page
     And I fill in and submit the form
-    When "office@example.com" open the email with subject "New signup"
-    Then they should see "John Doe" in the email body
-    And they should see "jdoe@email.com" in the email body
+    When I open my email
+    Then I should see the subscriber's details
 
   Scenario: Already signed up
-    Given I am on the home page
+    Given I am on the signup page
     And I've already subscribed
-    When I fill in and submit the form with the same email
-    Then I should see "Email has already been taken"
+    When I fill in and submit the form
+    Then I should see a error notification
