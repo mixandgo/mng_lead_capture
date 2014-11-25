@@ -1,3 +1,4 @@
+@javascript
 Feature: Lead signup
   In order to aquire readers for our website
   As a business
@@ -5,19 +6,19 @@ Feature: Lead signup
 
   Scenario: Guest signs up
     Given I am on the home page
-    When I fill in "Your Name" with "John Doe"
-    When I fill in "and E-Mail" with "johndoe@example.com"
-    And I click on "Sign Me Up"
-    Then I should be on the home page
-    And I should see "Thank you for subscribing"
-    And "office@example.com" should receive an email
+    When I fill in and submit the form
+    Then I should see "Thank you for subscribing"
+    And "office@example.com" should receive an email with subject "New signup"
+
+  Scenario: Owner receives the subscribers details
+    Given I am on the home page
+    And I fill in and submit the form
+    When "office@example.com" open the email with subject "New signup"
+    Then they should see "John Doe" in the email body
+    And they should see "jdoe@email.com" in the email body
 
   Scenario: Already signed up
     Given I am on the home page
-    And I've already signed up with "johndoe@example.com"
-    When I fill in "Your Name" with "John Doe"
-    When I fill in "and E-Mail" with "johndoe@example.com"
-    And I click on "Sign Me Up"
-    Then I should be on the lead signups page
-    And I should see "We were unable to process your request, please try again."
-    And I should see "Email has already been taken"
+    And I've already subscribed
+    When I fill in and submit the form with the same email
+    Then I should see "Email has already been taken"

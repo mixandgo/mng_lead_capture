@@ -3,4 +3,10 @@ en:
     create:
       create_fail: "We were unable to process your request, please try again."
       create_success: "Thank you for subscribing"
-
+  shared:
+    lead_signup_form:
+      sign_up_heading: "Sign Up"
+      newsletter_text: "Our email newsletter brings you blog updates, the latest news, and business advice."
+      name: "Your Name"
+      email: "and E-mail"
+      sign_me_up: "Sign me up"

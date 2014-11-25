@@ -1,12 +1,14 @@
 <div class="widget newsletter-signup-form">
   <div class="title">
-    <h3>Email Newsletter</h3>
+    <h3><%= t('.sign_up_heading') %></h3>
   </div>
-  <p>Sign up to receive content updates in your inbox.</p>
-  <%= form_for @lead_signup, :url => lead_signups_path do |f| %>
-    <%= render 'shared/form_errors', :obj => @lead_signup %>
-    <%= f.text_field :name, :placeholder => "Your Name", :class => "form-control" %>
-    <%= f.text_field :email, :placeholder => "and E-Mail", :class => "form-control" %>
-    <%= f.submit "Sign Me Up", :class => "btn btn-primary btn-block" %>
-  <% end %>
+  <p><%= t('.newsletter_text') %></p>
+  <div class="js-lead-sigup-form-wrapper">
+    <%= form_for LeadSignup.new, :url => lead_signups_path, :html => {:class => "js-lead-sigup-form"} do |f| %>
+      <div class="js-lead-sigup-form-errors"></div>
+      <%= f.text_field :name, :placeholder => t('.name'), :class => "form-control", :id => "name-field" %>
+      <%= f.text_field :email, :placeholder => t('.email'), :class => "form-control", :id => "email-field" %>
+      <%= f.submit t('.sign_me_up'), :class => "btn btn-primary btn-block", :id => "form-submit-btn" %>
+    <% end %>
+  </div>
 </div>

@@ -1,5 +1,11 @@
-Given(/^I fill in "(.*?)" with "(.*?)"$/) do |field, value|
-  fill_in field, :with => value
+Given(/^I fill in and submit the form$/) do
+  fill_in "name-field", :with => "John Doe"
+  fill_in "email-field", :with => "jdoe@email.com"
+  click_on "form-submit-btn"
+end
+
+Given(/^I fill in and submit the form with the same email$/) do
+  step %{I fill in and submit the form}
 end
 
 Given(/^I (?:press|click on) "(.*?)"$/) do |button|
@@ -22,8 +28,8 @@ Then(/^I should not see "(.*?)"$/) do |text|
   page.should_not have_content(text)
 end
 
-Given(/^I've already signed up with "(.+)"$/) do |email|
-  create(:lead_signup, :email => email)
+Given(/^I've already subscribed$/) do
+  create(:lead_signup, :email => "jdoe@email.com")
 end
 
 # Debugging tools

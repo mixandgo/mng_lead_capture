@@ -19,5 +19,10 @@ RSpec.describe LeadMailer, :type => :mailer do
     it "sets the subject to 'New signup'" do
       @email.should have_subject(/New signup/)
     end
+
+    it "sends the signup's name and email" do
+      expect(@email.body).to have_content(lead_signup.name)
+      expect(@email.body).to have_content(lead_signup.email)
+    end
   end
 end
